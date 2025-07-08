@@ -1,0 +1,46 @@
+export const pricing = [
+  {
+    title: "PHP Script Install & Setup Content",
+    price: "20-100",
+    features: [
+      "Demo Content Install",
+      "Set you all contents",
+      "Seo optimization (Basic)",
+      "Live chat system",
+      "Some design change",
+    ],
+    buttonText: "Get Quote",
+    delay: 200,
+    highlight: false,
+  },
+  {
+    title: "WP Theme Customization",
+    price: "80-250",
+    features: [
+      "Demo Content Install",
+      "Set you all contents",
+      "Adding 5-7 Products/ Items",
+      "Speed Optimization",
+      "Live chat system",
+      "Video Guide",
+    ],
+    buttonText: "Get Started",
+    delay: 400,
+    highlight: true,
+  },
+  {
+    title: "ReSkin Android App",
+    price: "30-120",
+    features: [
+      "Change App ID",
+      "Change Logo / Icon",
+      "Change colors",
+      "Generate keystore",
+      "Setup social login (If have)",
+      "Upload to google play",
+    ],
+    buttonText: "Get Started",
+    delay: 600,
+    highlight: false,
+  },
+];
