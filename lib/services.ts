@@ -46,3 +46,97 @@ export const services = [
     delay: 1200,
   },
 ];
+
+export const primaryServices = [
+  {
+    label: "Create WordPress Website",
+    price: 100,
+  },
+  {
+    label: "Install & Setup PHP Script",
+    price: 30,
+  },
+  {
+    label: "ReSkin/Customize Android Source Code",
+    price: 70,
+  },
+  {
+    label: "Custom Development",
+    price: 50,
+  },
+  {
+    label: "VPS Server Setup",
+    price: 50,
+  },
+];
+
+// if selected Create WordPress Website
+export const wordpressWebsiteServices = [
+  {
+    label: "Company profile/business website (Up to 5 pages)",
+    price: 150,
+  },
+  {
+    label: "ECommerce website (Up to 5 pages)",
+    price: 180,
+  },
+  {
+    label: "Blog website (Up to 5 pages)",
+    price: 130,
+  },
+  {
+    label: "Portfolio website (Up to 5 pages)",
+    price: 120,
+  },
+  {
+    label: "Non-profit website (Up to 5 pages)",
+    price: 100,
+  },
+];
+
+// if selected Install & Setup PHP Script
+export const installAndSetupScript = [
+  {
+    label:
+      "We will install a PHP script on your web hosting, change the logo, texts, images, etc., and configure the admin panel.",
+  },
+];
+
+// if selected ReSkin/Customize Android Source Code
+export const reSkinServices = [
+  {
+    label: "Flutter Source Code (Make APK)",
+    price: 100,
+  },
+  {
+    label: "Android Kotlin/Java Source Code",
+    price: 150,
+  },
+  {
+    label: "Others",
+  },
+];
+
+// if selected Custom Development
+export const customDevelopmentServices = [
+  {
+    label: "WordPress Theme Development",
+    price: 200,
+  },
+  {
+    label: "WordPress Plugin Development",
+    price: 100,
+  },
+  {
+    label: "Laravel Project/Website Development",
+    price: 250,
+  },
+];
+
+// if selected VPS Server Setup
+export const vpsServerSetupService = [
+  {
+    label:
+      "We can install a control panel on your VPS hosting server, setup SMTP for email, and migrate your old website to new VPS server. ",
+  },
+];

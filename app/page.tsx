@@ -8,60 +8,23 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  CheckCircle,
-  Code,
-  Globe,
-  Shield,
-  Zap,
-  ArrowRight,
-} from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { FloatingElements } from "@/components/floating-elements";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { AnimatedCounter } from "@/components/animated-counter";
-import Image from "next/image";
+
 import { services } from "@/lib/services";
 import { pricing } from "@/lib/pricing";
-import { MobileMenu } from "@/components/mobile-menu";
+
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-slate-50 via-white to-primary/5">
       {/* Header */}
-      <header className="px-4 lg:px-6 h-20 flex items-center border-b bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <Link href="/" className="flex items-center justify-center group">
-          <Image
-            src="/wp-methods-logo.png"
-            width={140}
-            height={50}
-            alt="logo"
-            className="max-w-full h-auto"
-          />
-        </Link>
-        <nav className="ml-auto flex items-center gap-6 sm:gap-8">
-          <Link
-            href="#services"
-            className="font-medium hover:text-primary transition-colors relative group"
-          >
-            Services
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-          </Link>
-          <Link
-            href="#pricing"
-            className="font-medium hover:text-primary transition-colors relative group"
-          >
-            Pricing
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-          </Link>
-          <Link href="/services">
-            <Button className="bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
-              Get Started
-            </Button>
-          </Link>
-          <MobileMenu />
-        </nav>
-      </header>
+      <Header />
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -74,7 +37,7 @@ export default function HomePage() {
                   variant="secondary"
                   className="mb-4 px-6 py-2 text-sm bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors"
                 >
-                  🚀 Professional Website Solutions
+                  🚀 Professional Web & App Solutions
                 </Badge>
               </ScrollReveal>
 
@@ -89,11 +52,10 @@ export default function HomePage() {
 
               <ScrollReveal delay={400}>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-xl/relaxed">
-                  We cover a wide range of niches and we are expanding
-                  gradually. We are helping hundreds of companies, startups and
-                  individuals to build professional websites for their company,
-                  shop, brand, and agency using our premium themes, codes, and
-                  services.
+                 At <strong>WP Methods Service</strong>, we specialize in creating custom websites,
+        digital experiences, and development solutions that help businesses grow online.
+        Based on years of experience in WordPress, Mobile App reskin, and full-stack development,
+        we deliver high-quality, performance-driven results for clients around the globe.
                 </p>
               </ScrollReveal>
 
@@ -240,11 +202,11 @@ export default function HomePage() {
         {/* Pricing Section */}
         <section
           id="pricing"
-          className="w-full py-20 md:py-32 bg-gradient-to-b from-primary/5 to-white"
+          className="w-full py-10 md:py-12 bg-gradient-to-b from-primary/5 to-white"
         >
           <div className="container px-4 md:px-6">
             <ScrollReveal>
-              <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
+              <div className="flex flex-col items-center justify-center space-y-4 text-center mb-6">
                 <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
                   Pricing Plans
                 </Badge>
@@ -253,7 +215,7 @@ export default function HomePage() {
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
                   Transparent pricing with no hidden fees. Get exactly what you
-                  need for your WordPress project.
+                  need for your service.
                 </p>
               </div>
             </ScrollReveal>
@@ -325,16 +287,16 @@ export default function HomePage() {
                   Ready to Get Started?
                 </Badge>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight lg:text-5xl">
-                  Transform Your WordPress Site Today
+                  Transform Your App or Site Today
                 </h2>
                 <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed">
                   Join hundreds of satisfied clients who have transformed their
-                  WordPress websites with our expert services.
+                  websites and apps with our expert services.
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={300}>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex items-center justify-center">
                 <Link href="/services">
                   <Button
                     size="lg"
@@ -344,13 +306,6 @@ export default function HomePage() {
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="h-14 px-8 border-2 border-primary/30 hover:border-primary hover:bg-primary/10 transition-all bg-transparent"
-                >
-                  Schedule Consultation
-                </Button>
               </div>
             </ScrollReveal>
           </div>
@@ -358,136 +313,7 @@ export default function HomePage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12">
-        <div className="container px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div className="space-y-4">
-              <Image
-                src="/wp-methods-logo.png"
-                width={140}
-                height={50}
-                alt="logo"
-                className="max-w-full h-auto"
-              />
-              <p className="text-slate-400 text-sm">
-                We love WordPress and we are here to provide you best WordPress
-                themes, plugins collections. and wordpress tips and tricks.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold text-lg">Services</h4>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-primary transition-colors"
-                  >
-                    WordPress Development
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-primary transition-colors"
-                  >
-                    Maintenance
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-primary transition-colors"
-                  >
-                    Speed Optimization
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-primary transition-colors"
-                  >
-                    Security
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold text-lg">Company</h4>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-primary transition-colors"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-primary transition-colors"
-                  >
-                    Portfolio
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-primary transition-colors"
-                  >
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-primary transition-colors"
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold text-lg">Contact</h4>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li>hello@wpmethods.com</li>
-                <li>(123) 456-7890</li>
-                <li>Mon-Fri 9AM-6PM EST</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-xs text-slate-400">
-              © {new Date().getFullYear()} WP Methods. All rights reserved.
-            </p>
-            <div className="flex gap-6 mt-4 sm:mt-0">
-              <Link
-                href="#"
-                className="text-xs hover:text-primary transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="#"
-                className="text-xs hover:text-primary transition-colors"
-              >
-                Terms of Service
-              </Link>
-              <Link
-                href="#"
-                className="text-xs hover:text-primary transition-colors"
-              >
-                Cookie Policy
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
